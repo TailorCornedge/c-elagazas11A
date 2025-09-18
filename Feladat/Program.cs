@@ -119,6 +119,45 @@ namespace Feladat
                 {
                     Console.WriteLine("Ez egy betű");
                 }
+
+                Console.WriteLine("Adjon megy egy jelszót. Csak a 'titok123' az engedélyezett.");
+                string jelsz = Console.ReadLine();
+                if (jelsz != "titok123")
+                {
+                    Console.WriteLine("Nem engedélyezett");
+                }
+                else
+                {
+                    Console.WriteLine("Engedélyezett");
+                }
+                int x = 0;
+                List<int> firstlist = new List<int>();
+                for (int i = 0; i < 3; i++) {
+                    Console.WriteLine("Adja meg a(z) " + (x+1) + ". számot");
+                    int y = int.Parse(Console.ReadLine());
+                    firstlist.Add(y);
+                    x = x + 1;
+                }
+                int kis = 0;
+                int nagy = 0;
+               int szamlal = 0;
+                foreach (int element in firstlist)
+                {
+                    if (szamlal == 0)
+                    {
+                        kis= element;
+                        nagy= element;
+                    }
+                    if (element > nagy){
+                        nagy= element;
+                    }
+                    if (kis>element)
+                    {
+                        kis = element;
+                    }
+                    szamlal = 1;
+                }
+                Console.WriteLine("A legnagyobb: " + nagy + "; a legkisebb: " + kis);
             }
             }
         }
