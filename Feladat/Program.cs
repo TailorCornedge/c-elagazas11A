@@ -88,7 +88,7 @@ namespace Feladat
             int tipp = 0;
             while (tipp != rand)
             {
-                tipp = int .Parse(Console.ReadLine());
+                tipp = int.Parse(Console.ReadLine());
                 if (tipp < rand)
                 {
                     Console.WriteLine("A szám nagyobb. Új tipp?");
@@ -101,8 +101,16 @@ namespace Feladat
                 {
                     Console.WriteLine("Eltaláltad!");
                 }
+                if (rand > 0 && rand % 2 == 0)
+                {
+                    Console.WriteLine("Ez a kitalált szám egy pozitív páros szám.");
+                }
+                else
+                {
+                    Console.WriteLine("Ez a kitalált szám nem egy pozitív páros szám.");
+                }
 
             }
-        }
+            }
         }
 }
