@@ -64,6 +64,23 @@ namespace Feladat
             {
                 Console.WriteLine("Nem szavazhat");
             }
+            Console.WriteLine("Adjon meg egy jegyet: ");
+            int jegy = int.Parse(Console.ReadLine());
+            if (1<=jegy && jegy<=2)
+            {
+                Console.WriteLine("Elégtelen");
+            }
+            else if(jegy == 3)
+            {
+                Console.WriteLine("Elégséges");
+            }
+            else if (jegy == 4) {
+                Console.WriteLine("Jó");
+            }
+            else
+            {
+                Console.WriteLine("Jeles");
+            }
         }
         }
 }
