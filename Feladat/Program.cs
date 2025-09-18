@@ -12,7 +12,8 @@ namespace Feladat
         {
             Console.WriteLine("Adjon meg egy számot: ");
             int szam = int.Parse(Console.ReadLine());
-            if (szam % 2 == 0) {
+            if (szam % 2 == 0)
+            {
                 Console.WriteLine("Ez a szám páros");
             }
             else
@@ -23,7 +24,8 @@ namespace Feladat
             {
                 Console.WriteLine("A szám pozitív");
             }
-            else if (szam < 0) {
+            else if (szam < 0)
+            {
                 Console.WriteLine("A szám negatív");
             }
             else
@@ -32,10 +34,26 @@ namespace Feladat
             }
             Console.WriteLine("Adjon meg egy hónapszámot (1-12): ");
             int honap = int.Parse(Console.ReadLine());
-            if (0<=honap<=1)
+            if (1 <= honap && honap <= 2)
             {
-
+                Console.WriteLine("Tél");
+            }
+            else if (3 <= honap && honap <= 5)
+            {
+                Console.WriteLine("Tavasz");
+            }
+            else if (6 <= honap && honap <= 8)
+            {
+                Console.WriteLine("Nyár");
+            }
+            else if (9 <= honap && honap <= 11)
+            {
+                Console.WriteLine("Ősz");
+            }
+            else
+            {
+                Console.WriteLine("Tél");
             }
         }
-    }
+        }
 }
