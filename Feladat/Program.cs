@@ -109,7 +109,16 @@ namespace Feladat
                 {
                     Console.WriteLine("Ez a kitalált szám nem egy pozitív páros szám.");
                 }
-
+                Console.WriteLine("Adjon megy vagy egy számot, vagy egy betűt");
+                var valami = Console.ReadLine();
+                if (char.IsNumber(valami[0]))
+                {
+                    Console.WriteLine("Ez egy szám");
+                }
+                else
+                {
+                    Console.WriteLine("Ez egy betű");
+                }
             }
             }
         }
