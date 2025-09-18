@@ -54,6 +54,16 @@ namespace Feladat
             {
                 Console.WriteLine("Tél");
             }
+            Console.WriteLine("Adja meg életkorát: ");
+            int kor = int.Parse(Console.ReadLine());
+            if (kor>=18)
+            {
+                Console.WriteLine("Szavazhat");
+            }
+            else
+            {
+                Console.WriteLine("Nem szavazhat");
+            }
         }
         }
 }
