@@ -81,6 +81,28 @@ namespace Feladat
             {
                 Console.WriteLine("Jeles");
             }
+            Random rnd = new Random();
+            int rand = rnd.Next(1, 5);  
+            Console.WriteLine("Kitaláltam egy számot 1 és 5 között. Próbáld meg kitalálni: ");
+            Console.WriteLine("Itt van amúgy: " + rand);
+            int tipp = 0;
+            while (tipp != rand)
+            {
+                tipp = int .Parse(Console.ReadLine());
+                if (tipp < rand)
+                {
+                    Console.WriteLine("A szám nagyobb. Új tipp?");
+                }
+                else if (tipp > rand)
+                {
+                    Console.WriteLine("A szám kisebb. Új tipp?");
+                }
+                else
+                {
+                    Console.WriteLine("Eltaláltad!");
+                }
+
+            }
         }
         }
 }
